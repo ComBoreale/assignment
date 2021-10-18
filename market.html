@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SPA</title>
+</head>
+<body>
+<h1>Games List</h1>
+<?php include 'ex2.php';?>
+<form action="ex2.php" method="GET">
+  <input type="submit" value="my button"/>
+<div class="contentWrapper" id="insertHTML1"></div>
+</form>
+<script>
+function showUnits1() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("insertHTML1").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "ex2.php");
+  xhttp.send();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/header.css" rel="stylesheet" type="text/css"/>
+	<link href="css/login.css" rel="stylesheet" type="text/css"/>
+	<link href="css/spa.css" rel="stylesheet" type="text/css"/>
+	<title>GEAM:Video Games</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/spa.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/load.js"></script>
+</head>
+<header class="site-header">
+	<div class="site-identity">
+		<a href="#"><img src="images.png" alt="Site Logo" /></a>
+		<h1><a href="#">GEAM Video Game Marketplace</a></h1>
+	</div>  
+	<nav class="site-navigation">
+		<ul class="nav">
+		<li><a href="#" data-target="AboutUs" class="nav-link">About Us</a></li> 
+		<li><a href="#" data-target="Marketplace" class="nav-link">Marketplace</a></li> 
+		<li><a href="#" data-target="Profile" class="nav-link">Profile</a></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Cart</button></li> 
+    		</ul>
+  	</nav>
+</header>
+
+<! LOGIN FORM>
+<div id="id01" class="modal">
+	<form class="modal-content animate" action="/action_page.php" method="post">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<img src="images.png" alt="Avatar" class=".logo">
+		</div>
+		<div class="container">
+			<label for="uname"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="uname" required>
+			<label for="psw"><b>Password</b></label>
+      			<input type="password" placeholder="Enter Password" name="psw" required>
+      			<button type="submit">Login</button>
+      			<label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+    		</div>
+    		<div class="container" style="background-color:#f1f1f1">
+      			<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      			<span class="psw">Forgot <a href="#">password?</a></span>
+    		</div>
+  	</form>
+</div>
+<! SPA PAGES>
+<body>
+    <main>
+        <div class="page active" id="AboutUs" onload="loadDoc();">
+            <ol>
+                <div id="about">
+            </ol>
+        </div>
+        <div class="page" id="Marketplace" onload="showUnits1(this.value);">
+                <ol>
+                        <div id="market"></div>
+                </ol>
+        </div>
+ <div class="page" id="Profile">
+                <ol>
+                        <h1>Profile</h1>
+                </ol>
+        </div>
+</main>
+</body>
+</html>
+
+
