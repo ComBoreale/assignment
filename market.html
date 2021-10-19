@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SPA</title>
+<title>Market Place</title>
 </head>
 <body>
 <h1>Games List</h1>
-<?php include 'ex2.php';?>
-<form action="ex2.php" method="GET">
-  <input type="submit" value="my button"/>
-<div class="contentWrapper" id="insertHTML1"></div>
+<form action="Access.php" method="GET">
+  <input type="submit" value="Display Product List"/>
 </form>
-<script>
-function showUnits1() {
+<form action="results.php">
+  <label for="search">Search Games:</label>
+  <input type="text" id="searched" name="search"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<sript>
+function showResults(str) {
+  if (str == "") {
+    document.getElementById("insertHTML1").innerHTML = "";
+    return;
+  }
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     document.getElementById("insertHTML1").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "ex2.php");
+  xhttp.open("GET", "search.php?q="+str);
   xhttp.send();
 }
 </script>
