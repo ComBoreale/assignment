@@ -3,20 +3,65 @@
 <head>
 <title>Market Place</title>
 </head>
+<style>
+body {
+  margin: 0;
+}
+
+u2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
 <body>
-<h1>Games List</h1>
-<form action="Access.php" method="GET">
-  <input type="submit" value="Display Product List"/>
-</form>
-<form action="results.php">
-  <label for="search">Search Games:</label>
-  <input type="text" id="searched" name="search"><br><br>
-  <input type="submit" value="Submit">
-</form>
-<sript>
-function showResults(str) {
+<h1>Marketplace</h1>
+<u2>
+  <li><a class="active" onclick="showResults()">Search For Game</a></li>
+  <li><a href="Access.php">Browse Full List</a></li>
+  <li><a onclick="Genresim()">Simulator's</a></li>
+  <li><a onclick="Genremmo()">MMO's</a></li>
+<li><a onclick="Genreshooter()">Shooters's</a></li>
+<li><a onclick="Genreparty()">Party</a></li>
+<li><a onclick="Genrehorror()">Horror</a></li>
+<li><a onclick="Genreturn()">Turn Based</a></li>
+<li><a onclick="Genresingle()">Single Player</a></li>
+<li><a onclick="Genrejrpg()">JRPG</a></li>
+</u2>
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+<label for="search">Search Games:</label>
+<input type="text" id="searched" name="search"><br><br>
+<div id="insertHTML1"></div>
+<div id="insertHTML2"></div>
+</div>
+<script>
+function showResults() {
+str=document.getElementById("searched").value;
   if (str == "") {
     document.getElementById("insertHTML1").innerHTML = "";
+document.getElementById("insertHTML2").innerHTML = "";
     return;
   }
   const xhttp = new XMLHttpRequest();
@@ -26,6 +71,7 @@ function showResults(str) {
   xhttp.open("GET", "search.php?q="+str);
   xhttp.send();
 }
+
 </script>
 </body>
 </html>
