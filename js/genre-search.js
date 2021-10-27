@@ -1,9 +1,18 @@
+function Fulllist() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("insertHTML2").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "php/full_list.php");
+  xhttp.send();
+}
+
 function Genremmo() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "mmo.php");
+  xhttp.open("GET", "php/mmo.php");
   xhttp.send();
 }
 
@@ -12,7 +21,7 @@ function Genrejrpg() {
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "jrpg.php");
+  xhttp.open("GET", "php/jrpg.php");
   xhttp.send();
 }
 
@@ -21,7 +30,7 @@ function Genreturn() {
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "turn.php");
+  xhttp.open("GET", "php/turn.php");
   xhttp.send();
 }
 
@@ -30,7 +39,7 @@ function Genresingle() {
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "single.php");
+  xhttp.open("GET", "php/single.php");
   xhttp.send();
 }
 
@@ -39,7 +48,7 @@ function Genresim() {
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "sim.php");
+  xhttp.open("GET", "php/sim.php");
   xhttp.send();
 }
 
@@ -48,7 +57,7 @@ function Genreshooter() {
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "shooter.php");
+  xhttp.open("GET", "php/shooter.php");
   xhttp.send();
 }
 
@@ -57,7 +66,7 @@ function Genreparty() {
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "party.php");
+  xhttp.open("GET", "php/party.php");
   xhttp.send();
 }
 
@@ -66,6 +75,6 @@ function Genrehorror() {
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "horror.php");
+  xhttp.open("GET", "php/horror.php");
   xhttp.send();
 }

@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {text-align: left;}
+</style>
+
 <body>
 <h1>LIST<h1>
 <hr>
@@ -15,7 +29,7 @@ $conn = new mysqli("localhost", "X33207069", "X33207069", "X33207069");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT ITEMID, NAME, GENRE, PRICE FROM ITEM WHERE GENRE='Turn Based'";
+$sql = "SELECT ITEMID, NAME, GENRE, PRICE FROM ITEM WHERE GENRE='JRPG'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
