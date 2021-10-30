@@ -4,11 +4,16 @@
 <title>Form site</title>
 </head>
 <body>
-<h2>Hello</h2>
-<p>Your username is:</p>
+<h2>Add Game to Account</h2>
+<form name="addgame" method="post" action="php/add_game.php">
+UserID:  <input type="text" name="user" value=""><br>
+ItemID:  <input type="text" name="item" value=""><br>
+<input type="reset" value="Reset">
+<input type="submit" value="Submit">
+</form>
 <br>
 <h2>List Owned Games</h2>
-<label for="search">Search Games:</label>
+<label for="search">User Details:</label>
 <input type="text" id="user" name="user"><br><br>
 <button onclick="UserOwned()">Click me</button>
 <div id="insertHTML4"></div>
