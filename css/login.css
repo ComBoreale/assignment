@@ -32,9 +32,10 @@ button:hover {
   margin: 24px 0 12px 0;
   position: relative;
 }
+
 /*change to logo */
-img.avatar {
-  width: 60%;
+.avatar {
+  width: 10%;
   border-radius: 20%;
 }
 

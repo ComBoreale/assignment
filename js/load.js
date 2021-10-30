@@ -7,5 +7,5 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-   $('#add').load("admin.html");
+   $('#profile').load("profile.html");
 });

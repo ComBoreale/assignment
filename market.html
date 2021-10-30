@@ -43,11 +43,12 @@ li1 a:hover {
 </style>
 
 <body>
+<br>
 <u2>
-  <li1><a class="active" onclick="showResults()">Click to Search</a></li>
-  <li1><a onclick="Fulllist()">Browse Full List</a></li>
-  <li1><a onclick="Genresim()">Simulator's</a></li>
-  <li1><a onclick="Genremmo()">MMO's</a></li>
+<li1><a class="active" onclick="showResults()">Click to Search</a></li>
+<li1><a onclick="Fulllist()">Browse Full List</a></li>
+<li1><a onclick="Genresim()">Simulator's</a></li>
+<li1><a onclick="Genremmo()">MMO's</a></li>
 <li1><a onclick="Genreshooter()">Shooters's</a></li>
 <li1><a onclick="Genreparty()">Party</a></li>
 <li1><a onclick="Genrehorror()">Horror</a></li>
@@ -55,17 +56,16 @@ li1 a:hover {
 <li1><a onclick="Genresingle()">Single Player</a></li>
 <li1><a onclick="Genrejrpg()">JRPG</a></li>
 </u2>
+
 <label for="search">Search Games:</label>
 <input type="text" id="searched" name="search"><br><br>
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-<div id="insertHTML2">
-</div>
+<div id="insertHTML2"></div>
 </div>
 <script>
 function showResults() {
 str=document.getElementById("searched").value;
  if (str == "") {
-    document.getElementById("insertHTML1").innerHTML = "";
 document.getElementById("insertHTML2").innerHTML = "";
     return;
   }
@@ -73,7 +73,7 @@ document.getElementById("insertHTML2").innerHTML = "";
   xhttp.onload = function() {
     document.getElementById("insertHTML2").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "php/search.php?q="+str);
+  xhttp.open("Get", "php/search.php?q="+str);
   xhttp.send();
 }
 </script>

@@ -7,6 +7,16 @@ function Fulllist() {
   xhttp.send();
 }
 
+function Fulllistdetailed() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("insertHTML3").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "php/detailed_search.php");
+  xhttp.send();
+}
+
+
 function Genremmo() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {

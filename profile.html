@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form site</title>
+</head>
+<body>
+<h2>Hello</h2>
+<p>Your username is:</p>
+<br>
+<h2>List Owned Games</h2>
+<label for="search">Search Games:</label>
+<input type="text" id="user" name="user"><br><br>
+<button onclick="UserOwned()">Click me</button>
+<div id="insertHTML4"></div>
+
+<script>
+function UserOwned() {
+str=document.getElementById("user").value;
+ if (str == "") {
+document.getElementById("insertHTML4").innerHTML = "";
+    return;
+  }
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("insertHTML4").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "php/user_search.php?q="+str);
+  xhttp.send();
+}
+</script>
+</body>
+</html>
