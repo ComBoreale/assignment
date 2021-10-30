@@ -5,3 +5,7 @@ $(document).ready(function(){
 $(document).ready(function(){
    $('#market').load("market.html");
 });
+
+$(document).ready(function(){
+   $('#add').load("admin.html");
+});

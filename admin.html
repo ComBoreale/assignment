@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form site</title>
+</head>
+<body>
+<h2>Remove item from databses</h2>
+<form name="remove" method="post" action="php/remove.php">
+ID Number :  <input type="text" name="id" value=""><br><br>
+<input type="reset" value="Reset">
+<input type="submit" value="Submit">
+</form>
+
+<h2>Add item to database</h2>
+<form name="item" method="post" action="php/add.php" onsubmit="return validateForm();">
+ID Number :  <input type="text" name="id" value=""><br><br>
+Genre Name : <input type="text" name="name"><br><br>
+Game Name :  <input type="text" name="genre"><br><br>
+Description :     <input type="text" name="description"><br><br>
+Supply :     <input type="text" name="supply"><br><br>
+Price :     <input type="text" name="price"><br><br>
+<input type="reset" value="Reset">
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
