@@ -37,13 +37,13 @@ if($mysqli->connect_error) {
   exit('Could not connect');
 }
 
-$sql = "SELECT ITEM.NAME FROM PURCHASE, ITEM WHERE PURCHASE.ITEMID=ITEM.ITEMID and PURCHASE.USERID=1";
+$sql = "SELECT ITEM.NAME FROM PURCHASE, ITEM WHERE PURCHASE.ITEMID=ITEM.ITEMID and PURCHASE.USERID='?'";
 
 $stmt = $mysqli->prepare($sql);
-$stmt->bind_param("s", $_GET['q']);
+$stmt->bind_param("i", $_GET['q']);
 $stmt->execute();
 $stmt->store_result();
-$stmt->bind_result($ITEM.ITEMID, $ITEM.NAME);
+$stmt->bind_result($ITEM.NAME);
 $stmt->fetch();
 $stmt->close();
 

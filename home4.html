@@ -25,25 +25,24 @@
 		<li><a href="#" data-target="Marketplace" class="nav-link">Marketplace</a></li> 
 		<li><a href="#" data-target="Profile" class="nav-link">Profile</a></li>
 		<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
-<li>		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log Out</button></li> 
-<li>		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></li> 		
-<li>		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Cart</button></li> 
-    		</ul>
-  	</nav>
+		<li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Log Out</button></li> 
+		<li><button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Sign Up</button></li> 		
+		<li><button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Cart</button></li>
+	</nav>
 </header>
 
 <! LOGIN FORM>
 <div id="id01" class="modal">
-	<form class="modal-content animate" action="/action_page.php" method="post">
+	<form class="modal-content animate" action="php/login.php" method="post">
 		<div class="imgcontainer">
 			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 			<img src="images/images.jpg" alt="Avatar" class="avatar">
 		</div>
 		<div class="container">
-			<label for="uname"><b>Username</b></label>
-			<input type="text" placeholder="Enter Username" name="uname" required>
-			<label for="psw"><b>Password</b></label>
-      			<input type="password" placeholder="Enter Password" name="psw" required>
+			<label for ="NAME">Enter NAME</label><br>
+			<input type="text" placeholder="NAME" id="NAME" NAME ="NAME" required>
+			<label for ="PASS">Enter PASS</label><br>
+      			<input type="PASS" placeholder="PASS" id="PASS" name ="PASS" required>
       			<button type="submit">Login</button>
       			<label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
     		</div>
@@ -52,6 +51,49 @@
       			<span class="psw">Forgot <a href="#">password?</a></span>
     		</div>
   	</form>
+</div>
+<! LOGOUT FORM>
+<div id="id02" class="modal">
+	<form class="modal-content animate" action="php/logoff.php" method="post">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<img src="images/images.jpg" alt="Avatar" class="avatar">
+		</div>
+		<div class="container">
+			<label for ="NAME">Enter NAME</label><br>
+			<input type="text" placeholder="NAME" id="NAME" NAME ="NAME" required>
+			<label for ="PASS">Enter PASS</label><br>
+      			<input type="PASS" placeholder="PASS" id="PASS" name ="PASS" required>
+      			<button type="submit">Login</button>
+      			<label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+    		</div>
+    		<div class="container" style="background-color:#f1f1f1">
+      			<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      			<span class="psw">Forgot <a href="#">password?</a></span>
+    		</div>
+  	</form>
+</div>
+<! SIGNUP FORM>
+<div id="id03" class="modal">
+	<form class="modal-content animate" action="php/signup.php" method="post">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<img src="images/images.jpg" alt="Avatar" class="avatar">
+		</div>
+		<div class="container">
+			<label for ="NAME">Enter NAME</label><br>
+			<input type="text" placeholder="NAME" id="NAME" NAME ="NAME" required>
+			<label for ="PASS">Enter PASS</label><br>
+      			<input type="PASS" placeholder="PASS" id="PASS" name ="PASS" required>
+      			<button type="submit">SignUp</button>
+      			
+    		</div>
+    		<div class="container" style="background-color:#f1f1f1">
+      			<button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+      			<span class="psw">Forgot <a href="#">password?</a></span>
+    		</div>
+  	</form>
+</div>
 </div>
 <! SPA PAGES>
 <body>
