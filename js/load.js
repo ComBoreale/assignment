@@ -9,3 +9,11 @@ $(document).ready(function(){
 $(document).ready(function(){
    $('#profile').load("profile.html");
 });
+
+$(document).ready(function(){
+   $('#admin').load("admin.html");
+});
+
+$(document).ready(function(){
+   $('#help').load("help.html");
+});
